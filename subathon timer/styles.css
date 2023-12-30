@@ -1,0 +1,214 @@
+* {
+	font-family: "Montserrat", sans-serif;
+	color: #fff; /* {{fontColor}} */
+	font-size: 1rem;
+}
+body {
+	background-color: #000; /* {{backgroundColor}} */
+}
+.fadeOutClass {
+	animation: fadeOut 1s;
+	animation-delay: 3s; /* {{fadeoutTime}}s */
+	animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes slide-in {
+	0% {
+		width: 0px;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes pop-in {
+	0% {
+		width: 0px;
+		height: 0px;
+		background-size: 0px 0px;
+		margin-top: 23px;
+		margin-left: 24px;
+	}
+	50% {
+		width: 0px;
+		height: 0px;
+		background-size: 0px 0px;
+		margin-top: 12px;
+		margin-left: 12px;
+		margin-right: 12px;
+		margin-bottom: 12px;
+	}
+	85% {
+		width: 23px;
+		height: 23px;
+		background-size: 23px 23px;
+		margin-top: 1px;
+		margin-left: 2px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	}
+	100% {
+		width: 21px;
+		height: 21px;
+		background-size: 21px 21px;
+		margin-top: 2px;
+		margin-left: 3px;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.main-container {
+	position: relative;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 3rem;
+}
+
+/* useless */
+.event-follower {
+	mask-image: url("https://cdn.streamelements.com/static/custom-event-list/follower.svg");
+	-webkit-mask-image: url("https://cdn.streamelements.com/static/custom-event-list/follower.svg");
+}
+
+.event-cheer {
+	mask-image: url("https://cdn.streamelements.com/static/custom-event-list/bits.svg");
+	-webkit-mask-image: url("https://cdn.streamelements.com/static/custom-event-list/bits.svg");
+}
+
+.event-host {
+	mask-image: url("https://cdn.streamelements.com/static/custom-event-list/host.svg");
+	-webkit-mask-image: url("https://cdn.streamelements.com/static/custom-event-list/host.svg");
+}
+
+.event-raid {
+	mask-image: url("https://cdn.streamelements.com/static/custom-event-list/raid.svg");
+	-webkit-mask-image: url("https://cdn.streamelements.com/static/custom-event-list/raid.svg");
+}
+
+.event-sub {
+	mask-image: url("https://cdn.streamelements.com/static/custom-event-list/sub.svg");
+	-webkit-mask-image: url("https://cdn.streamelements.com/static/custom-event-list/sub.svg");
+}
+
+.event-tip {
+	mask-image: url("https://cdn.streamelements.com/static/custom-event-list/tip.svg");
+	-webkit-mask-image: url("https://cdn.streamelements.com/static/custom-event-list/tip.svg");
+}
+
+.event-redemption {
+	mask-image: url("https://cdn.streamelements.com/static/custom-event-list/redemption.svg");
+	-webkit-mask-image: url("https://cdn.streamelements.com/static/custom-event-list/redemption.svg");
+}
+.event-container {
+	height: 2rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: rgba(111, 107, 222); /* {{backgroundColor}} */
+	border-radius: 1.4rem;
+	animation: 0.6s slide-in;
+	animation-fill-mode: forwards;
+	gap: 1rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	margin-top: 0.5rem;
+}
+.backgroundsvg {
+	/* background: url(https://s3.amazonaws.com/cdn.streamelements.com/static/event-list/patterns/{{theme}}.svg); */
+	background-size: 100px;
+	width: 100%;
+	opacity: calc(50 / 100); /* {{backgroundOpacity}} */
+	position: relative;
+	z-index: 0;
+}
+.event-image {
+	animation: 0.7s pop-in;
+	animation-fill-mode: forwards;
+	object-fit: contain;
+	display: inline-block;
+	width: 2rem;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	background-color: rgb(255, 255, 255); /* {{iconColor}} */
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	background-clip: content-box;
+}
+
+.username-container {
+	animation: 1.2s fade-in;
+	animation-fill-mode: forwards;
+	display: inline-block;
+	font-weight: 400;
+}
+
+.details-container {
+	animation: 1.2s fade-in;
+	animation-fill-mode: forwards;
+	display: inline-block;
+	font-weight: 700;
+	text-align: right;
+}
+
+.timer-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 1.4rem;
+	height: 8rem;
+	background: rgb(113, 108, 225);
+	text-align: center;
+}
+
+h1 {
+	display: block;
+	line-height: 2rem;
+}
+h1,
+span {
+	font-size: 6rem;
+	font-weight: 700;
+	margin: 0;
+	color: white;
+	text-shadow: black 2px 5px;
+}
+
+#log {
+	position: absolute;
+	top: -3rem;
+	right: 3rem;
+}
+
+.timer-log {
+	display: block;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	font-size: xx-large;
+	animation: 1.2s fade-in;
+	font-weight: 700;
+}
+.timer-log.added {
+	color: rgb(51, 199, 51);
+}
+.timer-log.removed {
+	color: rgb(228, 47, 47);
+}
