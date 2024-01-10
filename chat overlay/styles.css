@@ -1,0 +1,12 @@
+* {
+	font-family: "Montserrat", sans-serif;
+	color: black; /* {{fontColor}} */
+	font-size: 1rem;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	line-height: 1.5em;
+}
