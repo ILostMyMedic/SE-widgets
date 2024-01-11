@@ -14,7 +14,9 @@ body {
 	position: relative;
 	width: calc(1070px / 2);
 	height: calc(992px / 2);
+	/* background-image: url("https://raw.githubusercontent.com/ILostMyMedic/SE-widgets/master/leaderboard-small/assets/bg.svg"); */
 	background-image: url("assets/bg.svg");
+
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -68,7 +70,7 @@ body {
 	position: relative;
 	width: calc(714px / 2);
 	height: calc(123px / 2);
-	background-image: url("assets/first.svg");
+	background-image: url("https://raw.githubusercontent.com/ILostMyMedic/SE-widgets/master/leaderboard-small/assets/first.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -101,7 +103,7 @@ body {
 	position: relative;
 	width: calc(267px / 2);
 	height: calc(123px / 2);
-	background-image: url("assets/points.svg");
+	background-image: url("https://raw.githubusercontent.com/ILostMyMedic/SE-widgets/master/leaderboard-small/assets/points.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
