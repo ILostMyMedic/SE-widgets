@@ -63,7 +63,6 @@ body {
 }
 .col {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 }
 .bar {
@@ -73,50 +72,50 @@ body {
 	background-image: url("https://raw.githubusercontent.com/ILostMyMedic/SE-widgets/master/leaderboard-small/assets/first.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 .bar-content {
+	width: 70%;
+	/* background-color: blue; */
 }
 
-.name {
-	font-weight: 800;
-	font-size: 1.5rem;
-	margin-top: 2rem;
-}
 .details {
 	display: flex;
 	justify-content: center;
-	flex-direction: row;
-	gap: 1rem;
+	flex-direction: column;
+
+	margin-top: 0;
+	text-align: left;
 }
+.animated {
+	animation-name: rotateName;
+	animation-duration: 45s;
+	animation-iteration-count: infinite;
+}
+.details span {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	height: calc(123px / 2);
+}
+
 .username {
 	font-size: 1.2rem;
 	font-weight: 600;
-	margin-bottom: 0.5rem;
 }
-.amp {
-	font-size: 1.5rem;
+.name {
 	font-weight: 800;
-	margin-bottom: 0.5rem;
+	font-size: 2rem;
 }
 
 .score {
+	align-items: center;
 	position: relative;
 	width: calc(267px / 2);
 	height: calc(123px / 2);
 	background-image: url("https://raw.githubusercontent.com/ILostMyMedic/SE-widgets/master/leaderboard-small/assets/points.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-.details {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-}
-.username {
-	font-size: 1.2rem;
-	font-weight: 600;
-	margin-bottom: 0.5rem;
 }
 .points {
 	display: inline-block;
@@ -162,4 +161,34 @@ body {
 }
 .row:nth-child(5) {
 	animation-delay: 1.25s;
+}
+
+.row:nth-child(1) .animated {
+	animation-delay: 0.5s;
+}
+.row:nth-child(2) .animated {
+	animation-delay: 1s;
+}
+.row:nth-child(3) .animated {
+	animation-delay: 1.5s;
+}
+.row:nth-child(4) .animated {
+	animation-delay: 2s;
+}
+.row:nth-child(5) .animated {
+	animation-delay: 2.5s;
+}
+
+@keyframes rotateName {
+	0%,
+	74% {
+		transform: translate3d(0, 0, 0);
+	}
+	75%,
+	99% {
+		transform: translate3d(0, -50%, 0);
+	}
+	100% {
+		transform: translate3d(0, 0%, 0);
+	}
 }
