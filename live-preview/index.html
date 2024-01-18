@@ -9,16 +9,25 @@
 	</head>
 	<body>
 		<!-- =============================================================== -->
+		<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 		<link
 			href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 			rel="stylesheet"
 		/>
-		<div class="main-container">
-			<div class="table">
-				<div class="row">
-					<div class="col" id="red">-</div>
-					<div class="col" id="blue">-</div>
+		<div class="main-container" id="container">
+			<div id="content">
+				<div id="live-header">
+					<div class="ring-container">
+						<div class="ringring"></div>
+						<div class="circle"></div>
+					</div>
+					<h1>Live Preview</h1>
 				</div>
+				<!-- twitch video source -->
+				<div id="preview"></div>
+
+				<!-- twitch user details -->
+				<div id="details"></div>
 			</div>
 		</div>
 		<!-- =============================================================== -->
